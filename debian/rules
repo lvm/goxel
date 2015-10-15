@@ -1,0 +1,18 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+export DH_VERBOSE=1
+
+%:
+	dh $@ 
+
+override_dh_auto_build:
+	mkdir node_modules
+	npm install
+	npm install grunt-cli
+	node_modules/grunt-cli/bin/grunt
+
+override_dh_auto_clean:
+	rm -rf node_modules
+	rm -f npm-debug.log

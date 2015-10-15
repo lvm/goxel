@@ -1,0 +1,17 @@
+Source: goxel
+Section: graphic
+Priority: optional
+Maintainer: Mauro <mauro@sdf.org>
+Build-Depends: debhelper (>= 9), scons, libglfw3-dev,
+               python-pkgconfig, libgtk-3-dev
+Standards-Version: 3.9.6
+Homepage: https://github.com/guillaumechereau/goxel
+Vcs-Git: https://github.com/HuayraLinux/pkg-goxel.git
+Vcs-Browser: https://github.com/HuayraLinux/pkg-goxel
+
+Package: goxel
+Architecture: any
+Depends: ${shlibs:Depends}
+Description: A 3D voxel editor
+ You can use goxel to create voxel graphics (3D images formed of cubes).
+ It allows to export in .obj, .ply, and .png format.
