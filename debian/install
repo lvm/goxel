@@ -1,2 +1,4 @@
 debian/goxel.png usr/share/pixmaps
 debian/goxel.desktop   usr/share/applications/
+data usr/share/goxel
+goxel usr/bin

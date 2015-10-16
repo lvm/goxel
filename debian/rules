@@ -5,14 +5,8 @@
 export DH_VERBOSE=1
 
 %:
-	dh $@ 
-
-override_dh_auto_build:
-	mkdir node_modules
-	npm install
-	npm install grunt-cli
-	node_modules/grunt-cli/bin/grunt
+	dh $@ --with quilt
 
 override_dh_auto_clean:
-	rm -rf node_modules
-	rm -f npm-debug.log
+	rm -f .sconsign.dblite
+	dh_auto_clean
