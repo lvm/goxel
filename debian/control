@@ -11,7 +11,7 @@ Vcs-Browser: https://github.com/HuayraLinux/pkg-goxel
 
 Package: goxel
 Architecture: any
-Depends: ${shlibs:Depends}, libglfw3 (>= 3.0.4)
+Depends: ${shlibs:Depends}, ${misc:Depends}, libglfw3 (>= 3.0.4)
 Description: A 3D voxel editor
  You can use goxel to create voxel graphics (3D images formed of cubes).
  It allows to export in .obj, .ply, .txt, and .png format.
