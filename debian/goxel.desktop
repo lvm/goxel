@@ -5,6 +5,6 @@ Comment=A 3D voxel editor
 Comment[es]=Un editor Voxel 3d
 Terminal=false
 Type=Application
-Categories=Graphics;
+Categories=Graphics;3DGraphics
 Icon=goxel
 Exec=goxel

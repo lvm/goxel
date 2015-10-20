@@ -1,3 +1,6 @@
+Description: Replaces relative `data` dir with an absolute one.
+Author: Mauro <mauro@sdf.org>
+Forwarded: No
 Index: goxel-0.1.1/src/gui.cpp
 ===================================================================
 --- goxel-0.1.1.orig/src/gui.cpp

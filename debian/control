@@ -1,13 +1,14 @@
 Source: goxel
-Section: graphic
+Section: graphics
 Priority: optional
 Maintainer: Mauro <mauro@sdf.org>
 Build-Depends: debhelper (>= 9), scons (>= 2.3.1), libglfw3-dev (>= 3.0.4),
-               python-pkgconfig (>= 1.1.0), libgtk-3-dev (>= 3.14.5), quilt (>= 0.63)
+               python-pkgconfig (>= 1.1.0), libgtk-3-dev (>= 3.14.5), quilt (>= 0.63),
+               hardening-wrapper
 Standards-Version: 3.9.6
 Homepage: https://github.com/guillaumechereau/goxel
-Vcs-Git: https://github.com/HuayraLinux/pkg-goxel.git
-Vcs-Browser: https://github.com/HuayraLinux/pkg-goxel
+Vcs-Git: https://github.com/lvm/goxel.git
+Vcs-Browser: https://github.com/lvm/goxel
 
 Package: goxel
 Architecture: any
@@ -15,3 +16,14 @@ Depends: ${shlibs:Depends}, ${misc:Depends}, libglfw3 (>= 3.0.4)
 Description: A 3D voxel editor
  You can use goxel to create voxel graphics (3D images formed of cubes).
  It allows to export in .obj, .ply, .txt, and .png format.
+
+Package: goxel-dbg
+Section: debug
+Priority: extra
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, goxel (= ${binary:Version})
+Description: A 3D voxel editor (debug symbols)
+ You can use goxel to create voxel graphics (3D images formed of cubes).
+ It allows to export in .obj, .ply, .txt, and .png format.
+ .
+ This package contains the debugging symbols for goxel

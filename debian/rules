@@ -3,10 +3,21 @@
 
 # Uncomment this to turn on verbose mode.
 export DH_VERBOSE=1
+export DEB_BUILD_HARDENING=0
+
 
 %:
 	dh $@ --with quilt
 
+override_dh_auto_build:
+	make release
+	dh_auto_build
+
 override_dh_auto_clean:
 	rm -f .sconsign.dblite
 	dh_auto_clean
+
+.PHONY: override_dh_strip
+override_dh_strip:
+	dh_strip --dbg-package=goxel-dbg
+
